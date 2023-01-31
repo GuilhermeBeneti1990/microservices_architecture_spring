@@ -2,7 +2,6 @@ package com.beneti.hrworker.resources;
 
 import com.beneti.hrworker.entities.Worker;
 import com.beneti.hrworker.repositories.WorkerRepository;
-import org.hibernate.jdbc.Work;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
