@@ -1,15 +1,17 @@
-package com.beneti.hrworker;
+package com.beneti.hrapigateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
+@EnableZuulProxy
 @EnableEurekaClient
-public class HrWorkerApplication {
+public class HrApiGatewayApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HrWorkerApplication.class, args);
+		SpringApplication.run(HrApiGatewayApplication.class, args);
 	}
 
 }
