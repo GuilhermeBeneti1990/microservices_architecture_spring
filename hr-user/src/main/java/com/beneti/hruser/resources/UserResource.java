@@ -16,15 +16,15 @@ public class UserResource {
     private UserRepository userRepository;
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Optional<User>> findById(@PathVariable Long id) {
-        Optional<User> user = userRepository.findById(id);
-        return ResponseEntity.ok().body(user);
+    public ResponseEntity<User> findById(@PathVariable Long id) {
+        User obj = userRepository.findById(id).get();
+        return ResponseEntity.ok(obj);
     }
 
     @GetMapping(value = "/search")
-    public ResponseEntity<Optional<User>> findByEmail(@RequestParam String email) {
-        User user = userRepository.findByEmail(email);
-        return ResponseEntity.ok().body(Optional.ofNullable(user));
+    public ResponseEntity<User> findByEmail(@RequestParam String email) {
+        User obj = userRepository.findByEmail(email);
+        return ResponseEntity.ok(obj);
     }
 
 }
